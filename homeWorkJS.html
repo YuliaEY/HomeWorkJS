@@ -3,80 +3,16 @@
 <html>
 <head>
 	<title> Java Script Homework</title>
-	<style type="text/css">
-		html {
-			background-color: whitesmoke;
-		}
-		body{
-			background-color: #3aafa9;
-			display: grid;
-			 grid-template-columns:  50% 50%;
-  			grid-template-rows: 240px 360px;
-  			width: 900px;
-  			margin: auto;
-  			box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.75);
-  			padding-top: 20px;
-  			border-radius: 15px;
-		}
-		.task1, .task2, .task3, .task4 {
-			width: 80%;
-			height: 220px;
-			border: 2px solid #2b7a77;
-			border-radius: 5px;
-			align-self: center;
-			justify-self: center;
-			font-family: Verdana, sans-serif;
-			padding: 10px;
-			background-color: whitesmoke;
-			box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.75);
-		}
-		.task3, .task4 {
-			height: 270px;
-		}
-		h2 {
-			color: #406021;
-			text-align: center;
-		}
-		#me, #sister {
-			color: blue;
-			font-weight: bold;
-		}
-		.myAge {
-			display: flex;
-			justify-content: space-around;
-		}
-		.myAgeText{
-			width: 100px;
-		}
-		.task3, .task4 {
-			padding-left:  20px;
-		}
-		button {
-			background-color: #406021;
-			color: white;
-			width: 80px;
-			height: 25px;
-			text-transform: uppercase;
-			text-align: center;
-			border-radius: 8px;
-			box-shadow: 4px 4px 9px 0px rgba(0,0,0,0.75);
-			margin-left: 150px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
 </head>
 <body>
+
 	<div class="task1">
 		<h2> Task #1 </h2>
 
 		I am <span id="me"> f </span> years old, and my sister is <span id="sister"> f </span> ! 
 
-		 <script type="text/javascript">
-    var me = 22;
-    var sister = 30;
-    document.getElementById("me").innerHTML = me;  
-    document.getElementById("sister").innerHTML = sister; 
-    	</script>
-    
 	</div>
 	<div class="task2">
 		<h2> Task #2 </h2>
@@ -84,26 +20,9 @@
 		<p class="myAge"> <span class="myAgeText"> Sister`s age </span> <input type=" text" id="sisterAge"></p>
 		<button onclick="result()"> Submit </button>
 		<p id="result"> </p>
-		<script type="text/javascript">
-			function result(){
-				var myAge = document.getElementById('myAge').value;
-				var my = parseInt(myAge);
-				var sisterAge = document.getElementById('sisterAge').value;
-				var sis = parseInt(sisterAge);
-				if (my == sis) {
-					document.getElementById('result').innerHTML= " Me and my sister are the same age!";
-				} else if (my<sis) {
-					var younger = sis-my;
-					document.getElementById('result').innerHTML= "I am " +younger+ " years younger than my sister!";
-				} else  if ( my>sis){
-					var older = my-sis;
-					document.getElementById('result').innerHTML= "I am " +older+ " years older than my sister!";
-				} else {
-					document.getElementById('result').innerHTML= "Please provide correct details";
-				}
-			}
-		</script>
+		
 	</div>
+	<script src="script.js"></script>
 	<div class="task3">
 		<h2>Task #3</h2>
 		<h3> Every 4th number (5-35)</h3>
